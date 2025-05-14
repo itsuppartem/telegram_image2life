@@ -1,0 +1,13 @@
+# Core
+fastapi
+uvicorn[standard] # Includes httpx, websockets etc.
+python-dotenv
+motor           # Async MongoDB driver
+redis           # Redis client
+aiogram>=3.4.0   # For Frontend Bot (specify version if needed)
+python-telegram-bot # For Workers/Tasks sending
+pillow          # Image processing
+google-genai    # Gemini API
+yookassa        # YooKassa SDK
+python-multipart # For FastAPI file uploads
+

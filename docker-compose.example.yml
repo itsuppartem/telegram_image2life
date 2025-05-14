@@ -1,0 +1,41 @@
+services:
+  baby_frontend_image:
+    image: yourgithubname/baby_image_front:latest
+    env_file:
+      - .env_image_baby
+    restart:
+      always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+  baby_backend_image:
+    image: yourgithubname/baby_image_back:latest
+    env_file:
+      - .env_image_baby
+    ports:
+      - "8000:8000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+  baby_task_image:
+    image: yourgithubname/baby_image_tasks:latest
+    env_file:
+      - .env_image_baby
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+  baby_notifies_image:
+    image: yourgithubname/baby_image_notifies:latest
+    env_file:
+      - .env_image_baby
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
